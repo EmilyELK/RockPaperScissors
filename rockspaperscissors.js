@@ -1,13 +1,26 @@
-document.getElementById("start-game").onclick = playTournament;
-
+/*
 // user select rocks, paper or scissors
 function getUserChoice(){
     var userSelection = prompt("Do you choose rock, paper or scissors?");
     if(userSelection === ('rock'||'rocks'||'Rock'||'Rocks'||'scissors'||'Scissors'||'scissor'||'Scissor'||'paper'||'Paper'||'papers'||'Papers')){
 		return userSelection;
 	} else {
-		var userSelection = prompt("Invalid entry. Do you choose rock, paper or scissors?");
-		getUserChoice();
+		do {
+			prompt("Invalid entry. Do you choose rock, paper or scissors?");
+		}
+		while(userSelection !== ('rock'||'rocks'||'Rock'||'Rocks'||'scissors'||'Scissors'||'scissor'||'Scissor'||'paper'||'Paper'||'papers'||'Papers')){
+		}
+	}
+}
+*/
+
+function getUserChoice(){
+	var userSelection = prompt("Do you choose rock, paper or scissors?");
+	
+	do {
+		prompt("Invalid entry. Do you choose rock, paper or scissors?");
+	}
+	while(userSelection !== ('rock'||'rocks'||'Rock'||'Rocks'||'scissors'||'Scissors'||'scissor'||'Scissor'||'paper'||'Paper'||'papers'||'Papers')){
 	}
 }
 
