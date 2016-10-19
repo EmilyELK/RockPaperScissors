@@ -1,26 +1,42 @@
-/*
 // user select rocks, paper or scissors
-function getUserChoice(){
-    var userSelection = prompt("Do you choose rock, paper or scissors?");
-    if(userSelection === ('rock'||'rocks'||'Rock'||'Rocks'||'scissors'||'Scissors'||'scissor'||'Scissor'||'paper'||'Paper'||'papers'||'Papers')){
-		return userSelection;
-	} else {
-		do {
-			prompt("Invalid entry. Do you choose rock, paper or scissors?");
-		}
-		while(userSelection !== ('rock'||'rocks'||'Rock'||'Rocks'||'scissors'||'Scissors'||'scissor'||'Scissor'||'paper'||'Paper'||'papers'||'Papers')){
-		}
-	}
-}
-*/
 
 function getUserChoice(){
-	var userSelection = prompt("Do you choose rock, paper or scissors?");
-	
-	do {
-		prompt("Invalid entry. Do you choose rock, paper or scissors?");
+    var userSelection = prompt("Do you choose rock, paper or scissors?");
+    if (userSelection === "rock" ||
+    	userSelection === "rocks" ||
+    	userSelection === 'Rock' ||
+    	userSelection === 'Rocks' ||
+    	userSelection === 'scissors' ||
+    	userSelection === 'Scissors' ||
+    	userSelection === 'scissor' ||
+    	userSelection === 'Scissor' ||
+    	userSelection === 'paper' ||
+    	userSelection === 'Paper' ||
+    	userSelection === 'papers' ||
+    	userSelection === 'Papers'){
+		return userSelection;
+	} else {
+		incorrectUserChoice();
 	}
-	while(userSelection !== ('rock'||'rocks'||'Rock'||'Rocks'||'scissors'||'Scissors'||'scissor'||'Scissor'||'paper'||'Paper'||'papers'||'Papers')){
+}
+	
+function incorrectUserChoice(){
+	var userSelection = prompt("Invalid entry. Do you choose rock, paper or scissors?");
+	if(userSelection === "rock" ||
+    	userSelection === "rocks" ||
+    	userSelection === 'Rock' ||
+    	userSelection === 'Rocks' ||
+    	userSelection === 'scissors' ||
+    	userSelection === 'Scissors' ||
+    	userSelection === 'scissor' ||
+    	userSelection === 'Scissor' ||
+    	userSelection === 'paper' ||
+    	userSelection === 'Paper' ||
+    	userSelection === 'papers' ||
+    	userSelection === 'Papers'){
+		return userSelection;
+	} else {
+		incorrectUserChoice();
 	}
 }
 
@@ -42,7 +58,7 @@ function getComputerChoice(){
 function getWinner(computer, user){
     if (computer === user ) {
         return "Tie";
-    } else if ( (computer === "rock" && user == "scissors"||"scissor") || (computer === "paper" && user == "rock"||"rocks") || (computer === "scissors" && user == "paper"||"papers") ){
+    } else if ( (computer === "rock" && user === 'scissors' || user === 'Scissors' || user === 'scissor' || user === 'Scissor') || (computer === "paper" && user == 'rock' || user === 'rocks' || user === 'Rock' || user === 'Rocks') || (computer === "scissors" && user == 'paper' || user === 'Paper' || user === 'papers' || user === 'Papers') ){
         return "Computer";
     }else {
         return("User");
